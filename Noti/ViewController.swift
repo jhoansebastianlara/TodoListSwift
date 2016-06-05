@@ -9,10 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var itemTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    let todoList = TodoList()
+    
+    @IBAction func addButonPressed(sender: UIButton) {
+        print("Agregando un elemento a la lsita: \(itemTextField.text)")
+        todoList.addItem(itemTextField.text!)
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.dataSource = todoList
     }
 
     override func didReceiveMemoryWarning() {
