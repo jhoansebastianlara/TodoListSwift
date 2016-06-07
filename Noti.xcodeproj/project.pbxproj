@@ -15,6 +15,7 @@
 		EFDF6AE41CF7D42E00B89E76 /* NotiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF6AE31CF7D42E00B89E76 /* NotiTests.swift */; };
 		EFDF6AEF1CF7D42E00B89E76 /* NotiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF6AEE1CF7D42E00B89E76 /* NotiUITests.swift */; };
 		EFEEB52F1D04E5A10060E0F3 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEB52E1D04E5A10060E0F3 /* TodoList.swift */; };
+		EFEEB5311D05E1610060E0F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEEB5301D05E1610060E0F3 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EFDF6AEE1CF7D42E00B89E76 /* NotiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiUITests.swift; sourceTree = "<group>"; };
 		EFDF6AF01CF7D42E00B89E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFEEB52E1D04E5A10060E0F3 /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		EFEEB5301D05E1610060E0F3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				EFDF6AD51CF7D42E00B89E76 /* Assets.xcassets */,
 				EFDF6AD71CF7D42E00B89E76 /* LaunchScreen.storyboard */,
 				EFDF6ADA1CF7D42E00B89E76 /* Info.plist */,
+				EFEEB5301D05E1610060E0F3 /* DetailViewController.swift */,
 			);
 			path = Noti;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EFEEB52F1D04E5A10060E0F3 /* TodoList.swift in Sources */,
 				EFDF6AD11CF7D42E00B89E76 /* ViewController.swift in Sources */,
 				EFDF6ACF1CF7D42E00B89E76 /* AppDelegate.swift in Sources */,
+				EFEEB5311D05E1610060E0F3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
