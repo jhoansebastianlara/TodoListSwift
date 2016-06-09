@@ -13,11 +13,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("item: \(item)")
         self.descriptionLabel.text = item
+        
+        // para detectar el toque del label de fecha
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        // toca una vez
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        // se especifica que cuando toque con un dedo (max 4 es permitido)
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        tapGestureRecognizer.addTarget(self, action: "toogleDatePicker")
+        self.dateLabel.addGestureRecognizer(tapGestureRecognizer)
+        // activamos para que detecte el toque
+        self.dateLabel.userInteractionEnabled = true
+    }
+    
+    func toogleDatePicker() {
+        self.datePicker.hidden = !self.datePicker.hidden
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +44,17 @@ class DetailViewController: UIViewController {
     @IBAction func dateSelected(sender: UIDatePicker) {
         print("fecha selecionada \(sender.date)")
         self.dateLabel.text = formatDate(sender.date)
+        self.datePicker.hidden = true
     }
+    
+    @IBAction func addImage(sender: UIBarButtonItem) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        // imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        // todos los ui tienen el sgte metodo
+        self.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
     
     @IBAction func addNotification(sender: UIBarButtonItem) {
         if let dateString = self.dateLabel.text {

@@ -75,20 +75,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-eP-P8u">
-                                <rect key="frame" x="0.0" y="94" width="600" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-eP-P8u">
+                                <rect key="frame" x="0.0" y="64" width="600" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N8K-rO-bea">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zj-bl-ND2">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6K-po-0Kc">
-                                                <rect key="frame" x="304" y="0.0" width="296" height="150"/>
+                                                <rect key="frame" x="304" y="0.0" width="296" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -96,16 +96,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zag-uy-FXS">
-                                        <rect key="frame" x="0.0" y="150" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="60" width="600" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPF-lQ-sco">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-E2-5f1">
-                                                <rect key="frame" x="304" y="0.0" width="296" height="150"/>
+                                                <rect key="frame" x="304" y="0.0" width="296" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -122,28 +122,54 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6nh-m3-jzF">
-                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcY-vF-qyT">
+                                <rect key="frame" x="0.0" y="184" width="600" height="216"/>
+                            </imageView>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tpP-aZ-PCm">
+                                <rect key="frame" x="0.0" y="184" width="600" height="216"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="TOX-of-O10"/>
+                                    <constraint firstAttribute="height" constant="216" id="Ozf-lD-MN6"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="486930712.97628897">
-                                    <!--2016-06-06 18:31:52 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="487135522.88333899">
+                                    <!--2016-06-09 03:25:22 +0000-->
                                 </date>
                                 <connections>
-                                    <action selector="dateSelected:" destination="xmB-15-Y7G" eventType="valueChanged" id="uCB-OO-dub"/>
+                                    <action selector="dateSelected:" destination="xmB-15-Y7G" eventType="valueChanged" id="eY2-bb-8Fo"/>
                                 </connections>
                             </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckA-R3-2w2">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RBA-Jw-AIZ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HQg-SD-LjM"/>
+                                    <barButtonItem systemItem="camera" id="a1h-Mc-QgH">
+                                        <connections>
+                                            <action selector="addImage:" destination="xmB-15-Y7G" id="bsK-l9-4SG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6nh-m3-jzF" secondAttribute="trailing" id="0Ym-eA-RX7"/>
                             <constraint firstItem="IGa-eP-P8u" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="Gm7-6s-G0k"/>
                             <constraint firstItem="IGa-eP-P8u" firstAttribute="top" secondItem="tgB-aG-lvf" secondAttribute="bottom" id="RPh-SA-naw"/>
-                            <constraint firstItem="6nh-m3-jzF" firstAttribute="top" secondItem="tgB-aG-lvf" secondAttribute="bottom" constant="320" id="RXH-EH-A2H"/>
                             <constraint firstAttribute="trailing" secondItem="IGa-eP-P8u" secondAttribute="trailing" id="VYe-Yu-Iw6"/>
-                            <constraint firstItem="IGa-eP-P8u" firstAttribute="height" secondItem="SN8-Rd-lgA" secondAttribute="height" multiplier="0.5" id="VeR-fW-20g"/>
-                            <constraint firstItem="6nh-m3-jzF" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="jtO-Kb-SpV"/>
+                            <constraint firstItem="IGa-eP-P8u" firstAttribute="height" secondItem="SN8-Rd-lgA" secondAttribute="height" multiplier="0.2" id="VeR-fW-20g"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="WKB-Sx-b9F"/>
+                            <constraint firstAttribute="trailing" secondItem="ckA-R3-2w2" secondAttribute="trailing" id="cqA-EJ-5zZ"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="width" secondItem="rcY-vF-qyT" secondAttribute="width" id="dIS-Y5-rWg"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="eVh-1y-tam"/>
+                            <constraint firstItem="rcY-vF-qyT" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="eyG-gz-icO"/>
+                            <constraint firstItem="ckA-R3-2w2" firstAttribute="leading" secondItem="SN8-Rd-lgA" secondAttribute="leading" id="gne-NI-2zy"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="top" secondItem="IGa-eP-P8u" secondAttribute="bottom" id="lcw-jS-ftq"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="height" secondItem="rcY-vF-qyT" secondAttribute="height" id="p4o-wK-K23"/>
+                            <constraint firstAttribute="trailing" secondItem="tpP-aZ-PCm" secondAttribute="trailing" id="pr9-85-apd"/>
+                            <constraint firstItem="rcY-vF-qyT" firstAttribute="top" secondItem="IGa-eP-P8u" secondAttribute="bottom" id="qum-mI-pXI"/>
+                            <constraint firstItem="KfC-xX-SoV" firstAttribute="top" secondItem="ckA-R3-2w2" secondAttribute="bottom" id="sHP-44-OaQ"/>
+                            <constraint firstItem="tpP-aZ-PCm" firstAttribute="top" secondItem="IGa-eP-P8u" secondAttribute="bottom" id="t9h-YV-ZIp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="la2-e1-C7f">
@@ -155,6 +181,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="qUf-E2-5f1" id="bkZ-Y3-BvH"/>
+                        <outlet property="datePicker" destination="tpP-aZ-PCm" id="5Zs-G4-EVv"/>
                         <outlet property="descriptionLabel" destination="f6K-po-0Kc" id="RHG-gc-nYU"/>
                     </connections>
                 </viewController>
