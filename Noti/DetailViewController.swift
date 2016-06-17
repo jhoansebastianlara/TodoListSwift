@@ -8,13 +8,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var item: String?
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
-
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("item: \(item)")
@@ -33,6 +33,7 @@ class DetailViewController: UIViewController {
     }
     
     func toogleDatePicker() {
+        self.imageView.hidden = self.datePicker.hidden
         self.datePicker.hidden = !self.datePicker.hidden
     }
 
@@ -45,11 +46,13 @@ class DetailViewController: UIViewController {
         print("fecha selecionada \(sender.date)")
         self.dateLabel.text = formatDate(sender.date)
         self.datePicker.hidden = true
+        self.imageView.hidden = false
     }
     
     @IBAction func addImage(sender: UIBarButtonItem) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePickerController.delegate = self
         // imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         // todos los ui tienen el sgte metodo
         self.presentViewController(imagePickerController, animated: true, completion: nil)
@@ -84,6 +87,16 @@ class DetailViewController: UIViewController {
         let parser = NSDateFormatter()
         parser.dateFormat = "dd/MM/yyyy HH:mm"
         return parser.dateFromString(string)!
+    }
+    
+    // MARK: Image picker controller methods
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        // en lugar de enviarnos una imagen, envia un diccionario (porque se puede meter cualquier cosa: img, videos)
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.imageView.image = image
+        }
+        // cerramos el componente
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     /*
